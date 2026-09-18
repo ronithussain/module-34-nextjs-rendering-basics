@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import SearchFood from "../components/SearchFood";
+// import SearchFood from "../components/SearchFood";
 
 // Option-1: To write Promise
 const foodPromise = async () => {
@@ -11,8 +11,8 @@ const foodPromise = async () => {
   return foods;
 };
 // option-2: write Promise
-const foodPromise2 = fetch("https://phi-lab-server.vercel.app/api/v1/lab/foods/top-foods")
-.then((res) => res.json());
+// const foodPromise2 = fetch("https://phi-lab-server.vercel.app/api/v1/lab/foods/top-foods")
+// .then((res) => res.json());
 
 const FoodPage = () => {
   return (
@@ -21,7 +21,7 @@ const FoodPage = () => {
       <div>
         <Suspense fallback={<p>Loading foods...</p>}>
           {/* <SearchFood foodPromise={foodPromise()} /> */}
-          <SearchFood foodPromise={foodPromise2} />
+          {/* <SearchFood foodPromise={foodPromise2} /> */}
         </Suspense>
       </div>
     </div>
